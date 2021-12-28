@@ -3,17 +3,20 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
-const {NODE_ENV} = process.env;
+const { NODE_ENV } = process.env;
 
 module.exports = {
-  entry: resolve(__dirname, "src/index.js"),
+  entry: resolve(__dirname, "src/index.ts"),
   output: {
     filename: "bundle.js",
-    path: resolve(`${__dirname  }/dist`),
+    path: resolve(`${__dirname}/dist`),
     clean: true,
     environment: {
       arrowFunction: false,
     },
+  },
+  resolve: {
+    extensions: [".js", ".ts"],
   },
   devServer: {
     compress: true,
@@ -26,12 +29,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
+        test: /\.ts$/,
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
+            presets: [["@babel/preset-env", { targets: "defaults" }]],
           },
         },
       },
