@@ -1,7 +1,7 @@
 {
   "name": "weather-report",
   "version": "1.0.0",
-  "description": "Weather report",
+  "description": "Game of life",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Stern-Ritter/Weather-project.git"
+    "url": "git+https://github.com/Stern-Ritter/game-of-life.git"
   },
   "author": "Konstantin Fadeev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Stern-Ritter/Weather-project/issues"
+    "url": "https://github.com/Stern-Ritter/game-of-life/issues"
   },
-  "homepage": "https://github.com/Stern-Ritter/Weather-project#readme",
+  "homepage": "https://github.com/Stern-Ritter/game-of-life#readme",
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
