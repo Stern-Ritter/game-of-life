@@ -15,8 +15,16 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: "module",
   },
-  ignorePatterns: ["webpack.config.js", "babel.config.js"],
+  ignorePatterns: [
+    ".eslintrc.js",
+    "webpack.config.js",
+    "babel.config.js",
+    "dist/**/*",
+    "coverage/**/*",
+  ],
   rules: {
+    "import/no-unresolved": "off",
+    "import/extensions": ["warn", "never"],
     "import/prefer-default-export": "off",
     "max-len": [
       "error",
@@ -25,8 +33,6 @@ module.exports = {
         ignoreComments: true,
       },
     ],
-    "import/no-unresolved": "off",
-    "import/extensions": ["warn", "never"],
   },
   plugins: ["jest", "@typescript-eslint"],
 };

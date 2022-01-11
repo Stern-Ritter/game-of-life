@@ -1,5 +1,5 @@
 {
-  "name": "weather-report",
+  "name": "game-of-life",
   "version": "1.0.0",
   "description": "Game of life",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "build": "webpack build --node-env production",
     "dev": "webpack serve --open",
     "lint": "eslint . --ext .js,.ts && tsc --noEmit",
-    "lint:fix": "eslint . --fix --ext .js,.ts",
+    "lint:fix": "eslint . --fix --ext .js,.ts && tsc --noEmit",
     "prepare": "husky install"
   },
   "repository": {
