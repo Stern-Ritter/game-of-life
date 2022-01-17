@@ -26,6 +26,7 @@ module.exports = {
     "import/no-unresolved": "off",
     "import/extensions": ["warn", "never"],
     "import/prefer-default-export": "off",
+    "no-param-reassign": ["error", { props: false }],
     "max-len": [
       "error",
       {
@@ -33,6 +34,7 @@ module.exports = {
         ignoreComments: true,
       },
     ],
+    "no-unneeded-ternary": "off",
   },
   plugins: ["jest", "@typescript-eslint"],
 };

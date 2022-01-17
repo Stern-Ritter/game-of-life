@@ -1,0 +1,44 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game__container {
+  width: 400px;
+  height: 400px;
+}
+.game__field {
+  width: 100%;
+  height: 100%;
+}
+
+.game__button {
+  padding: 10px;
+  font-size: 16px;
+  min-width: 100px;
+  min-height: 50px;
+  cursor: pointer;
+}
+
+.game__input_speed {
+  min-width: 100px;
+  min-height: 50px;
+}
+
+.cell {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.cell_alive {
+  background-color: green;
+}
+
+.cell_dying {
+  background-color: violet;
+}
+
+.cell_dead {
+  background-color: grey;
+}

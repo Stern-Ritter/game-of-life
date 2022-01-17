@@ -1,5 +1,5 @@
-function simple(num: number) : void {
-  console.log(`simple ${num}`);
-}
+import { createGameOfLife } from "./createGameOfLife";
+import "./index.css";
 
-simple(1);
+const parentElement = document.querySelector('.game') as HTMLElement;
+createGameOfLife(10, 10, parentElement);
