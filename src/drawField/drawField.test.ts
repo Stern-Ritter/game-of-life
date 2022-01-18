@@ -19,7 +19,7 @@ describe("Function drawField()", () => {
 
   it("renders correct field", () => {
     data.forEach((test) => {
-      drawField(parentElement, test.array);
+      drawField(parentElement, test.array, test.array);
       expect(parentElement.querySelectorAll('.cell')).toHaveLength(test.length);
       expect(parentElement.querySelectorAll('.cell_alive')).toHaveLength(test.alive);
       expect(parentElement.querySelectorAll('.cell_dead')).toHaveLength(test.dead);
@@ -27,8 +27,9 @@ describe("Function drawField()", () => {
   });
 
   it("correct set event handler clickHandler() on click event", () => {
-    drawField(parentElement, [[1, 0, 1], [1, 0, 1], [1, 0, 1]], clickHandler);
-    drawField(parentElement, [[1, 0, 1], [1, 0, 1], [1, 0, 1]], clickHandler);
+    const array = [[1, 0, 1], [1, 0, 1], [1, 0, 1]];
+    drawField(parentElement, array, array, clickHandler);
+    drawField(parentElement, array, array, clickHandler);
 
     let cell = parentElement.querySelector('.cell[data-x="0"][data-y="1"]') as HTMLElement;
     cell.dispatchEvent(new Event('click'));
