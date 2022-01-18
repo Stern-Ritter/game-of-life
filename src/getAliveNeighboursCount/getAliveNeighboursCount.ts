@@ -1,4 +1,4 @@
-import { getCurrentCellState } from "./getCurrentCellState";
+import { getCurrentCellState } from "../getCurrentCellState/getCurrentCellState";
 
 export function getAliveNeighboursCount(field: number[][], x: number, y: number) : number {
   let count = 0;

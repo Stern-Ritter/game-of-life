@@ -1,5 +1,5 @@
 import { createGameOfLife } from "./createGameOfLife";
-import * as module from "./drawField";
+import * as module from "../drawField/drawField";
 
 jest.useFakeTimers();
 

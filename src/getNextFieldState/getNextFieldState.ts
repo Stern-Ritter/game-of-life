@@ -1,6 +1,6 @@
-import { getCurrentCellState } from "./getCurrentCellState";
-import { getAliveNeighboursCount } from "./getAliveNeighboursCount";
-import { getNewCellState } from "./getNewCellState";
+import { getCurrentCellState } from "../getCurrentCellState/getCurrentCellState";
+import { getAliveNeighboursCount } from "../getAliveNeighboursCount/getAliveNeighboursCount";
+import { getNewCellState } from "../getNewCellState/getNewCellState";
 
 export function getNextFieldState(field: number[][]): number[][] {
   const nextStateField = field.map((arr) => arr.slice());

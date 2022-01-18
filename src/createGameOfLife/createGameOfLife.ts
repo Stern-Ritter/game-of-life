@@ -1,7 +1,8 @@
-import { drawField } from "./drawField";
-import { getNextFieldState } from "./getNextFieldState";
-import { checkLivingCells } from "./checkLivingCells";
-import { checkPeriodicConfiguration } from "./checkPeriodicConfiguration";
+import { drawField } from "../drawField/drawField";
+import { getNextFieldState } from "../getNextFieldState/getNextFieldState";
+import { checkLivingCells } from "../checkLivingCells/checkLivingCells";
+import { checkPeriodicConfiguration }
+from "../checkPeriodicConfiguration/checkPeriodicConfiguration";
 
 export function createGameOfLife(sizeX: number, sizeY: number, parentElement: HTMLElement): void {
   let timer: number;
