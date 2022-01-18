@@ -21,7 +21,7 @@ describe("Function createGameOfLife", () => {
     parentElement = document.createElement('div');
   });
 
-  it("creates field and 'Start', 'Clear' buttons", () => {
+  it("creates field, 'Start' and 'Clear' buttons", () => {
     const sizeX = 10;
     const sizeY = 10;
     createGameOfLife(10, 10, parentElement);

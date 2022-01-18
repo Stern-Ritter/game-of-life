@@ -7,10 +7,10 @@ import { clearField } from "../clearField/clearField";
 
 export function createGameOfLife(sizeX: number, sizeY: number, parentElement: HTMLElement): void {
   let timer: number;
-  let checkFieldConfiguration: (field: number[][]) => boolean;
   let isRunning = false;
   let field = Array.from(Array(sizeY), () => Array(sizeX).fill(0));
   let nextStateField: number[][];
+  let checkFieldConfiguration: (array: number[][]) => boolean;
 
   const header = document.createElement('h1');
   const fieldContainer = document.createElement('div');
@@ -36,7 +36,7 @@ export function createGameOfLife(sizeX: number, sizeY: number, parentElement: HT
     timer = window.setInterval(() => {
       field = getNextFieldState(field);
       nextStateField = getNextFieldState(field);
-      if(checkLivingCells(field) || checkFieldConfiguration(field)) { stop(); }
+      if(checkLivingCells(field) || checkFieldConfiguration(field)) { stop() }
       setTimeout(drawField, Number(speed) / 2, fieldContainer, field, nextStateField, clickHandler);
       drawField(fieldContainer, field, field, clickHandler);
     }, Number(speed));
@@ -52,12 +52,14 @@ export function createGameOfLife(sizeX: number, sizeY: number, parentElement: HT
 
   header.textContent = "Game of life";
   header.classList.add('game__title');
+
   fieldContainer.classList.add('game__container');
+
   buttonHandler.classList.add("button-handler");
   startButton.classList.add('game__button', 'game__start-btn');
-  clearButton.classList.add('game__button','game__clear-btn');
   startButton.type = "button";
   startButton.textContent = 'Start';
+  clearButton.classList.add('game__button','game__clear-btn');
   clearButton.type = "button";
   clearButton.textContent = 'Clear';
 
