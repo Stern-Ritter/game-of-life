@@ -1,0 +1,71 @@
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #2a2c2f;
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+  /* Сглаживание шрифта */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Подгонка размера текста */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+
+.game {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game__title {
+  font-size: 32px;
+}
+
+.game__container {
+  width: 400px;
+  height: 400px;
+}
+
+.game__field {
+  width: 100%;
+  height: 100%;
+}
+
+.button-handler {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.game__button {
+  padding: 10px;
+  font-size: 16px;
+  min-width: 100px;
+  min-height: 50px;
+  cursor: pointer;
+}
+
+.game__input_speed {
+  min-width: 100px;
+  min-height: 50px;
+  cursor: pointer;
+}
+
+.cell {
+  cursor: pointer;
+}
+
+.cell_alive {
+  background-color: green;
+}
+
+.cell_dying {
+  background-color: rgb(76, 119, 160);
+}
+
+.cell_dead {
+  background-color: grey;
+}
