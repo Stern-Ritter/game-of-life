@@ -1,10 +1,10 @@
-# Проект "Игра Жизнь" на языке Typescript
-
-## Описание проекта
+# "Игра Жизнь" на языке Typescript
 
 ![Jest coverage workflow](https://github.com/Stern-Ritter/game-of-life/actions/workflows/coverage.yml/badge.svg)
 ![Sanity check workflow](https://github.com/Stern-Ritter/game-of-life/actions/workflows/sanity-check.yml/badge.svg)
 ![Deploy workflow](https://github.com/Stern-Ritter/game-of-life/actions/workflows/deploy.yml/badge.svg)
+
+## Описание проекта
 
 Игра «Жизнь» (англ. Conway's Game of Life) — клеточный автомат, придуманный английским математиком Джоном Конвеем в 1970 году.
 
@@ -25,6 +25,13 @@
 3. реализован автостоп игры, когда все клетки умерли или складывается периодическая конфигурация;
 4. реализован механизм изменения скорости игры;
 5. реализована подсветка клеток, которые являясь живыми должны умереть в следующем поколении.
+
+## Использованные технологии
+
+- TypeScript,
+- HTML,
+- CSS,
+- Jest.
 
 **Github-pages**
 
